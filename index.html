@@ -41,9 +41,10 @@
         <div class="hero-content">
           <p class="eyebrow">Hi, my name is Chakshu.</p>
           <h1 id="hero-title">I build, break, and learn with technology.</h1>
+          <p class="hero-tagline">Making technology feel fun again.</p>
           <p class="hero-copy">
-            Innovator by mistake, lifelong learner, and tech enthusiast exploring the intersection of
-            curiosity, creation, and useful digital experiments.
+            Innovator by mistake, lifelong learner, and tech enthusiast exploring curiosity, systems, and
+            useful digital experiments.
           </p>
           <div class="hero-actions">
             <a class="button primary" href="#projects">See Projects</a>
@@ -91,41 +92,20 @@
           <h2 id="projects-title">Projects, experiments, and useful things in progress</h2>
           <div class="steps-grid">
             <article>
-              <span class="card-icon pink">03</span>
+              <span class="card-icon pink circuit-icon" aria-hidden="true"></span>
               <h3>Tech Experiments</h3>
               <p>Small prototypes, tests, and ideas that come from building things hands-on.</p>
             </article>
             <article>
-              <span class="card-icon yellow">04</span>
-              <h3>Learning Notes</h3>
+              <span class="card-icon yellow pages-icon" aria-hidden="true"></span>
+              <h3>Learning Notes / Blog</h3>
               <p>Notes from the path: what worked, what broke, and what became clearer.</p>
             </article>
             <article>
-              <span class="card-icon green">05</span>
+              <span class="card-icon green branch-icon" aria-hidden="true"></span>
               <h3>Open Source</h3>
               <p>Code and experiments shared through GitHub as the portfolio grows.</p>
             </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="benefits section-band" aria-labelledby="benefits-title">
-        <div class="section-inner">
-          <p class="eyebrow">Approach</p>
-          <h2 id="benefits-title">A simple way of working: explore, build, improve.</h2>
-          <div class="benefit-list">
-            <div>
-              <strong>Curiosity first</strong>
-              <p>Start with questions, follow the interesting thread, and learn by doing.</p>
-            </div>
-            <div>
-              <strong>Hands-on building</strong>
-              <p>Turn ideas into small working pieces instead of letting them stay abstract.</p>
-            </div>
-            <div>
-              <strong>Keep improving</strong>
-              <p>Break things, understand why, and use each iteration to get sharper.</p>
-            </div>
           </div>
         </div>
       </section>
@@ -136,14 +116,17 @@
           <h2 id="interests-title">The things I keep coming back to</h2>
           <div class="benefit-list">
             <div>
+              <span class="interest-icon mint system-icon" aria-hidden="true"></span>
               <strong>System Enthusiast</strong>
               <p>Exploring how tools, workflows, and connected systems can work better together.</p>
             </div>
             <div>
+              <span class="interest-icon yellow health-icon" aria-hidden="true"></span>
               <strong>Overall Health / Anti Aging Research</strong>
               <p>Following practical research around long-term health, recovery, and aging well.</p>
             </div>
             <div>
+              <span class="interest-icon pink electronics-icon" aria-hidden="true"></span>
               <strong>Electronics and Prototyping</strong>
               <p>Building, testing, and learning through hands-on circuits, devices, and prototypes.</p>
             </div>
@@ -178,15 +161,19 @@
         <div class="section-inner">
           <p class="eyebrow">Say hello</p>
           <h2 id="cta-title">Have a project, idea, or learning path to talk about?</h2>
-          <form class="signup-form">
+          <form class="signup-form" action="https://formsubmit.co/chakshu.bhatia1000@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New message from chakshubhatia.com" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
             <label>
               <span>Name</span>
-              <input type="text" name="name" placeholder="Your name" autocomplete="name" />
+              <input type="text" name="name" placeholder="Your name" autocomplete="name" required />
             </label>
             <label>
               <span>Email</span>
-              <input type="email" name="email" placeholder="you@example.com" autocomplete="email" />
+              <input type="email" name="email" placeholder="you@example.com" autocomplete="email" required />
             </label>
+            <input type="hidden" name="_next" value="https://www.chakshubhatia.com/#cta" />
             <button class="button primary" type="submit">Send a Hello</button>
           </form>
         </div>

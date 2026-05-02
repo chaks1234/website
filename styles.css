@@ -204,6 +204,15 @@ h3 {
   font-size: clamp(1.05rem, 2vw, 1.28rem);
 }
 
+.hero-tagline {
+  max-width: 620px;
+  margin-bottom: 14px;
+  color: var(--ink);
+  font-size: clamp(1.32rem, 2.2vw, 1.85rem);
+  font-weight: 950;
+  line-height: 1.16;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -410,16 +419,91 @@ h3 {
 }
 
 .card-icon {
-  display: grid;
+  position: relative;
+  display: block;
   width: 66px;
   height: 54px;
-  place-items: center;
   margin-bottom: 42px;
   border: 3px solid var(--ink);
   border-radius: 10px;
   color: var(--ink);
   font-weight: 950;
   box-shadow: 4px 4px 0 var(--ink);
+}
+
+.circuit-icon::before,
+.circuit-icon::after,
+.pages-icon::before,
+.pages-icon::after,
+.branch-icon::before,
+.branch-icon::after {
+  content: "";
+  position: absolute;
+}
+
+.circuit-icon::before {
+  left: 13px;
+  top: 25px;
+  width: 28px;
+  height: 4px;
+  background: var(--ink);
+  box-shadow:
+    12px -13px 0 var(--ink),
+    12px 13px 0 var(--ink);
+}
+
+.circuit-icon::after {
+  right: 11px;
+  top: 16px;
+  width: 16px;
+  height: 22px;
+  background: var(--ink);
+  clip-path: polygon(44% 0, 100% 0, 66% 36%, 100% 36%, 32% 100%, 48% 52%, 0 52%);
+}
+
+.pages-icon::before {
+  left: 17px;
+  top: 11px;
+  width: 28px;
+  height: 28px;
+  border: 4px solid var(--ink);
+  border-radius: 6px;
+  background: var(--canvas);
+}
+
+.pages-icon::after {
+  left: 10px;
+  top: 18px;
+  width: 28px;
+  height: 28px;
+  border: 4px solid var(--ink);
+  border-radius: 6px;
+  background: linear-gradient(var(--ink), var(--ink)) 7px 13px / 14px 4px no-repeat var(--canvas);
+}
+
+.branch-icon::before {
+  left: 16px;
+  top: 12px;
+  width: 30px;
+  height: 30px;
+  border-left: 4px solid var(--ink);
+  border-bottom: 4px solid var(--ink);
+  border-radius: 0 0 0 14px;
+}
+
+.branch-icon::after {
+  left: 10px;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  border: 4px solid var(--ink);
+  border-radius: 50%;
+  background: var(--canvas);
+  box-shadow:
+    28px 2px 0 -1px var(--canvas),
+    28px 2px 0 3px var(--ink),
+    28px 28px 0 -1px var(--canvas),
+    28px 28px 0 3px var(--ink);
 }
 
 .blue {
@@ -472,6 +556,87 @@ h3 {
   display: block;
   margin-bottom: 8px;
   font-size: 1.12rem;
+}
+
+.interest-icon {
+  position: relative;
+  display: block;
+  width: 66px;
+  height: 54px;
+  margin-bottom: 20px;
+  border: 3px solid var(--ink);
+  border-radius: 10px;
+  box-shadow: 4px 4px 0 var(--ink);
+}
+
+.mint {
+  background: var(--mint);
+}
+
+.interest-icon::before,
+.interest-icon::after {
+  content: "";
+  position: absolute;
+}
+
+.system-icon::before {
+  left: 9px;
+  top: 17px;
+  width: 10px;
+  height: 10px;
+  border: 3px solid var(--ink);
+  border-radius: 50%;
+  background: var(--canvas);
+  box-shadow:
+    18px 0 0 -1px var(--canvas),
+    18px 0 0 3px var(--ink),
+    36px 0 0 -1px var(--canvas),
+    36px 0 0 3px var(--ink);
+}
+
+.system-icon::after {
+  left: 17px;
+  top: 20px;
+  width: 30px;
+  height: 3px;
+  background: var(--ink);
+}
+
+.health-icon::before {
+  left: 28px;
+  top: 12px;
+  width: 8px;
+  height: 28px;
+  background: var(--ink);
+}
+
+.health-icon::after {
+  left: 18px;
+  top: 22px;
+  width: 28px;
+  height: 8px;
+  background: var(--ink);
+}
+
+.electronics-icon::before {
+  left: 10px;
+  top: 14px;
+  width: 22px;
+  height: 22px;
+  border: 3px solid var(--ink);
+  border-radius: 4px;
+  background: var(--canvas);
+}
+
+.electronics-icon::after {
+  right: 8px;
+  top: 23px;
+  width: 18px;
+  height: 3px;
+  background: var(--ink);
+  box-shadow:
+    -8px -10px 0 var(--ink),
+    -8px 10px 0 var(--ink);
 }
 
 .metrics {
