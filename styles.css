@@ -213,6 +213,35 @@ h3 {
   line-height: 1.16;
 }
 
+.hero-tagline-char {
+  display: inline-block;
+  transform-origin: 50% 78%;
+  animation: tagline-char-wiggle 1.4s ease-in-out infinite;
+  animation-delay: calc(var(--char-index, 0) * 50ms);
+}
+
+@keyframes tagline-char-wiggle {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg) translateY(-1px);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+  75% {
+    transform: rotate(-2deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-tagline-char {
+    animation: none;
+  }
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -284,6 +313,8 @@ h3 {
   height: 100%;
   object-fit: cover;
   object-position: center 34%;
+  filter: saturate(0.82) contrast(0.9) brightness(0.98);
+  transform: scale(1.01);
 }
 
 .status-pill {
@@ -416,6 +447,7 @@ h3 {
   background: var(--white);
   padding: 24px;
   box-shadow: 6px 6px 0 var(--ink);
+  transition: transform 160ms ease, box-shadow 160ms ease;
 }
 
 .card-icon {
@@ -544,12 +576,57 @@ h3 {
   margin-top: 32px;
 }
 
+.career-grid {
+  display: grid;
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.career-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 320px);
+  gap: 18px;
+  border: 3px solid var(--ink);
+  border-radius: 12px;
+  background: var(--white);
+  padding: 18px;
+  box-shadow: 6px 6px 0 var(--ink);
+  align-items: center;
+}
+
+.career-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 3px solid var(--ink);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--ink);
+}
+
+.career-video iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.career-copy h3 {
+  margin-bottom: 10px;
+}
+
 .benefit-list div {
   padding: 20px;
   border: 3px solid var(--ink);
   border-radius: 12px;
   background: var(--canvas);
   box-shadow: 5px 5px 0 var(--ink);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.steps-grid article:hover,
+.steps-grid article:focus-within,
+.benefit-list div:hover,
+.benefit-list div:focus-within {
+  transform: translateY(-2px);
 }
 
 .benefit-list strong {
@@ -755,6 +832,10 @@ input::placeholder {
 
   .steps-grid,
   .benefit-list {
+    grid-template-columns: 1fr;
+  }
+
+  .career-card {
     grid-template-columns: 1fr;
   }
 
